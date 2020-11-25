@@ -9,10 +9,10 @@ Constraints, 2 Damen sehen einander:
 *	Extra 1: keine 3 Damen auf einer beliebigen geraden Linie!
 *	Extra 2: N - ungerade
  
-Lösung in Form **1 2 3 4 5 6 7**, Aufzählung startet mit 1, X –Index der Zelle, Y –Zahl in der Zelle 
+Lösung in Form **0 1 2 3 4 5 6**, Aufzählung startet mit 0, X –Index der Zelle, Y –Zahl in der Zelle 
 
 Z.B. 
-*7 1 4 2 8 6 9 3 5*
+*6 0 3 1 7 5 8 2 4*
 
 Entspricht einem Board:  
 o H o o o o o o o  
