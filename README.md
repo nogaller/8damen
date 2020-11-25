@@ -1,6 +1,6 @@
 # 8damen
-Kennen Sie das **8 Damen Problem**? 
-Wir treiben es auf das nächste Level ;) 
+Kennen Sie das **8 Damen Problem**?  
+Wir treiben es auf das nächste Level ;)  
 Aufgabe: **N Damen** auf einem **NxN großen Brett** zu platzieren.
 Constraints, 2 Damen sehen einander: 
 *	Horizontal
@@ -11,7 +11,7 @@ Constraints, 2 Damen sehen einander:
  
 Lösung in Form **0 1 2 3 4 5 6**, Aufzählung startet mit 0, X –Index der Zelle, Y –Zahl in der Zelle 
 
-Z.B. 
+Z.B.  
 *6 0 3 1 7 5 8 2 4*
 
 Entspricht einem Board:  
