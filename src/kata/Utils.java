@@ -1,7 +1,7 @@
 package kata;
 
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 /**
  * Utility collection
@@ -22,10 +22,7 @@ public final class Utils {
 	 * @return array contents as {@link String}
 	 */
 	public static String printArray(int[] board) {
-		StringBuilder sb = new StringBuilder().append(board[0]);
-		for (int j = 1; j < board.length; j++)
-			sb.append(' ').append(board[j]);
-		return sb.toString();
+		return Arrays.stream(board).mapToObj(Integer::toString).collect(Collectors.joining(" "));
 	}
 
 	/**

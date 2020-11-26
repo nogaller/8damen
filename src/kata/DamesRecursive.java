@@ -34,6 +34,7 @@ public class DamesRecursive {
 		System.out.printf("Calculated in %sms\n", time);
 
 		System.out.println(dames);
+		System.out.println();
 		Utils.printGfx(dames.board);
 	}
 

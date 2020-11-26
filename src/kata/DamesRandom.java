@@ -35,6 +35,7 @@ public class DamesRandom {
 		time = System.currentTimeMillis() - time;
 		System.out.printf("Calculated in %sms\n", time);
 		System.out.println(dames);
+		System.out.println();
 		Utils.printGfx(dames.board);
 	}
 
@@ -122,25 +123,25 @@ public class DamesRandom {
 	}
 
 	private void findDiagonalConflicts(Set<Integer> conflicts, int x) {
-			Set<Long> declinations = new HashSet<>(board.length - x);
-			for (int xr = x + 1; xr < board.length; xr++) {
-				int dx = xr - x;
-				int dy = board[xr] - board[x];
+		Set<Long> declinations = new HashSet<>(board.length - x);
+		for (int xr = x + 1; xr < board.length; xr++) {
+			int dx = xr - x;
+			int dy = board[xr] - board[x];
 //				45° and 135°
-				if (dx == dy || dx == -dy) {
-					conflicts.add(x);
-					conflicts.add(xr);
-				}
+			if (dx == dy || dx == -dy) {
+				conflicts.add(x);
+				conflicts.add(xr);
+			}
 
 //				any 3 in one line
-				double declination = 1000000. * dy / dx;
-				long dec = Math.round(declination);
-				if (!declinations.add(dec)) {
-					conflicts.add(x);
-					conflicts.add(xr);
-				}
+			double declination = 1000000. * dy / dx;
+			long dec = Math.round(declination);
+			if (!declinations.add(dec)) {
+				conflicts.add(x);
+				conflicts.add(xr);
 			}
 		}
+	}
 
 	// FIXME debugging information, that algorithm is in convergence
 	private int prvConflicts = 1000;
