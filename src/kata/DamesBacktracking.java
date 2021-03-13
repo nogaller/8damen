@@ -8,17 +8,17 @@ import java.util.Set;
 import java.util.stream.IntStream;
 
 /**
- * Die Lösung implementiert die Tiefensuche mit Backtracking<br>
- * Es werden von Links nach Rechts Damen zufällig an nicht-kollidierende Felder
- * platziert, bis keine Lösung mehr möglich ist. <br>
- * Bei Sackgasse gehe einen Schritt zurück, und probiere andere Optionen durch,
- * bis entweder eine Lösung oder eine Sackgasse gefunden wurde. <br>
- * Für <b>ungerade N < 9</b> gibt, den Tests nach, keine Lösung
+ * Die LÃ¶sung implementiert die Tiefensuche mit Backtracking<br>
+ * Es werden von Links nach Rechts Damen zufÃ¤llig an nicht-kollidierende Felder
+ * platziert, bis keine LÃ¶sung mehr mÃ¶glich ist. <br>
+ * Bei Sackgasse gehe einen Schritt zurÃ¼ck, und probiere andere Optionen durch,
+ * bis entweder eine LÃ¶sung oder eine Sackgasse gefunden wurde. <br>
+ * FÃ¼r <b>ungerade N < 9</b> gibt, den Tests nach, keine LÃ¶sung
  *
  * @author Anton
  *
  */
-public class DamesRecursive {
+public class DamesBacktracking {
 
 	/**
 	 * Calculate a solution for hard-coded <b>N</b>
@@ -28,7 +28,7 @@ public class DamesRecursive {
 	public static void main(String[] args) {
 		long time = System.currentTimeMillis();
 
-		DamesRecursive dames = new DamesRecursive(9);
+		DamesBacktracking dames = new DamesBacktracking(9);
 
 		time = System.currentTimeMillis() - time;
 		System.out.printf("Calculated in %sms\n", time);
@@ -45,7 +45,7 @@ public class DamesRecursive {
 	 *
 	 * @param board - int array
 	 */
-	DamesRecursive(int[] board) {
+	DamesBacktracking(int[] board) {
 		this.board = board;
 	}
 
@@ -54,7 +54,7 @@ public class DamesRecursive {
 	 *
 	 * @param n - width of the field
 	 */
-	public DamesRecursive(int size) {
+	public DamesBacktracking(int size) {
 		if ((size & 1) == 0)
 			throw new ExceptionInInitializerError("Only EVEN size allowed");
 		board = new int[size];
